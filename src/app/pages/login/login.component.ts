@@ -43,14 +43,11 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    const data: Ilogin = {
-      emailPer: this.f.controls.email.value,
-      passwordPer: this.f.controls.password.value,
-    }
+   
 
-    this.router.navigateByUrl("/menu/estudiantes-necesidades");
+ 
 
-
+    window.location.href = "/menu/estudiantes-necesidades";
 
 
   }

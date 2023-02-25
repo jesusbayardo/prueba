@@ -1,0 +1,202 @@
+<mat-dialog-content class="mat-typography">
+
+
+    <div class=" card card-primary">
+        <div class="card-header">
+            <h5 class="modal-title" id="exampleModalLabel">Estudiates con necesidades educativas específicas (NEE)
+            </h5>
+        </div>
+      
+            <div class="card-body">
+                <section style="min-height: 300px;">
+                    <ul class="nav nav-pills mb-2" id="pills-tab" role="tablist">
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA ESTUDIANTES CON NEE---------------------------->
+                        <!------------------------------------------------------>
+
+                        <li class="nav-item border tabmenu" role="presentation">
+                            <button style="height: 100%;width: 100%;" class="nav-link active tabmenu"
+                                id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
+                                role="tab" aria-controls="pills-home" aria-selected="true">Estudiantes con NEE</button>
+                        </li>
+
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA DESTREZAS---------------------------->
+                        <!------------------------------------------------------>
+
+
+                        <li class="nav-item border tabmenu" role="presentation">
+                            <button style="height: 100%;width: 100%;" class="nav-link  tabmenu" id="pills-destrezas-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-destrezas" type="button" role="tab"
+                                aria-controls="pills-destrezas" aria-selected="true">Destrezas</button>
+
+                        </li>
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA Indicadores---------------------------->
+                        <!------------------------------------------------------>
+
+
+                        <li class="nav-item border tabmenu" role="presentation">
+                            <button style="height: 100%;width: 100%;" class="nav-link tabmenu"
+                                id="pills-indicadores-tab" data-bs-toggle="pill" data-bs-target="#pills-indicadores"
+                                type="button" role="tab" aria-controls="pills-indicadores"
+                                aria-selected="false">Indicadores</button>
+                        </li>
+
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA Estrategias---------------------------->
+                        <!------------------------------------------------------>
+
+                        <li class="nav-item border tabmenu" role="presentation">
+                            <button style="height: 100%;width: 100%;" class="nav-link tabmenu"
+                                id="pills-estrategias-tab" data-bs-toggle="pill" data-bs-target="#pills-estrategias"
+                                type="button" role="tab" aria-controls="pills-estrategias"
+                                aria-selected="false">Estrategias</button>
+                        </li>
+
+
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA Actividades---------------------------->
+                        <!------------------------------------------------------>
+
+                        <li class="nav-item border tabmenu" role="presentation">
+                            <button style="height: 100%;width: 100%;" class="nav-link tabmenu"
+                                id="pills-actividades-tab" data-bs-toggle="pill" data-bs-target="#pills-actividades"
+                                type="button" role="tab" aria-controls="pills-actividades"
+                                aria-selected="false">Actividades</button>
+                        </li>
+
+
+                    </ul>
+
+
+
+
+
+
+                    <div class="tab-content" id="pills-tabContent">
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA ESTUDIANTES CON NEE---------------------------->
+                        <!------------------------------------------------------>
+
+
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+
+                            <app-tab-estudiantes-nee></app-tab-estudiantes-nee>
+
+
+                        </div>
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA DESTREZAS---------------------------->
+                        <!------------------------------------------------------>
+                        <div class="tab-pane fade" id="pills-destrezas" role="tabpanel"
+                            aria-labelledby="pills-destrezas-tab">
+
+
+
+
+
+                            <app-tab-destrezas></app-tab-destrezas>
+
+
+
+
+
+
+                        </div>
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA indicadores---------------------------->
+                        <!------------------------------------------------------>
+
+                        <div class="tab-pane fade" id="pills-indicadores" role="tabpanel"
+                            aria-labelledby="pills-indicadores-tab">
+                            Indicadores
+
+
+                        </div>
+
+
+
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA estrategias---------------------------->
+                        <!------------------------------------------------------>
+
+                        <div class="tab-pane fade" id="pills-estrategias" role="tabpanel"
+                            aria-labelledby="pills-estrategias-tab">
+
+
+                            <app-tab-estrategia></app-tab-estrategia>
+
+
+                       
+
+
+
+                        </div>
+
+
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA actividades---------------------------->
+                        <!------------------------------------------------------>
+
+                        <div class="tab-pane fade" id="pills-actividades" role="tabpanel"
+                            aria-labelledby="pills-actividades-tab">
+
+
+                            actividades
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+                </section>
+            </div>
+
+           
+
+
+            <div class="card-footer">
+                <button mat-dialog-close class="btn btn-secondary float-right">Cerrar</button>
+              
+            </div>
+       
+    </div>
+</mat-dialog-content>

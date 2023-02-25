@@ -16,3 +16,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;font-size: 1
     overflow-x:auto ;
 
   }
+
+  input{
+    font-size: 11px !important;
+  }
+
+  button{
+    font-size: 11px !important;
+  }
+
+  select{
+    font-size: 11px !important;
+  }
+  option{
+    font-size: 11px !important;
+  }

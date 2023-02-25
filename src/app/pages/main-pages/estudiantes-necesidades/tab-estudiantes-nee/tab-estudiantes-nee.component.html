@@ -1,0 +1,35 @@
+
+Estudiante con necesidaes educativas específicas
+<form autocomplete="off" [formGroup]="form1" style="padding-top: 10px;">
+
+    <div class="form-group">
+        <select formControlName="category" (ngModelChange)="SelectPrimerTab()"
+            class=" form-select form-select-sm">
+            <option [ngValue]="null">Seleccciona a un estudiante de la lista</option>
+            <option *ngFor="let option of dataEstudiante" [ngValue]="option">
+                {{option.nombreestudiante}}</option>
+        </select>
+    </div>
+
+
+
+</form>
+
+
+
+
+<section *ngIf="estudianteNee">
+
+    <div *ngFor="let aux of selected.discapacidades">
+        <div class="border" style="width: 100%; ">
+            <label for="">Especificación de la NEE:</label>{{aux.nombrediscapacidad}}
+        </div>
+
+
+    </div>
+
+    <div class="border" style="width: 100%; ">
+        <label for="">Grado de adaptación:</label> {{selected.gradoadaptacioncurricular1}}
+    </div>
+</section>
+

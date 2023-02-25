@@ -1,0 +1,381 @@
+
+<div id="global">
+    <section style="padding: 20px;background-color: rgba(0, 0, 0, 0.083);">
+
+
+
+
+        <!------------------------------------------------>
+        <!----------------Entrada Select destrezas-------------------------------->
+        <!------------------------------------------------>
+
+        <div class="row">
+            <div class="col-sm-9">
+
+                <form autocomplete="off" [formGroup]="form2">
+                    <div class="form-group">
+                        <mat-form-field appearance="outline" style="width: 100%">
+                        
+                          <mat-select  formControlName="destreza"  (selectionChange)="selectChange()">
+        
+                            <mat-select-filter [placeholder]="'Inicie Busqueda'" #matFilterBasic
+                            [displayMember]="'detreza'" [array]="filter"
+                            (filteredReturn)="filteredList =$event"></mat-select-filter>
+        
+                            <mat-option *ngFor="let colegio of jsondestrezas " [value]="colegio.detreza">
+                              {{colegio.detreza| uppercase}}
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      
+                      </div>
+
+
+                </form>
+            </div>
+
+
+
+            <!-------------------------------AÑADENUEVA DESTREZAS----------------------------->
+            <!--------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------->
+            <div class="col-sm">
+                <button type="button" class="btn btn-primary btn-sm"
+                    (click)="agregarCollapse()" style="padding: 10px;width: 100%;"> <i
+                        class="fa-solid fa-plus"></i>Añadir
+                    detreza</button>
+
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+
+    <!----------------------------------------------------------------------->
+    <!-----inicia el cliclo para agregar  mas tarjetas de destrezas------------------------------------------------------------------>
+    <!----------------------------------------------------------------------->
+
+    <div id="{{collapse}}" *ngFor="let collapse of collapses; let i = index">
+        <section style="padding: 20px;background-color: rgba(0, 0, 0, 0.083);">
+
+           
+
+            <div class="row">
+                <div class="col-sm">
+
+                    <input for="" class="form-control " value="{{this.texto}}">
+                </div>
+                <div class="col-sm-3">
+                    <div style="padding-top:5px;" id="s{{collapse}}">
+                        <button display="block" name="{{collapse}}" #username
+                            id="c{{collapse}}" (click)="validate(username)"
+                            class="btn btn-primary btn-sm">Crear</button>
+
+                        &nbsp;
+
+                        <button name="{{collapse}}" display="block" name="{{collapse}}"
+                            id="b{{collapse}}" #username1 (click)="borrarTrabajo(i)">
+                            <i
+                                class="fa-solid fa-trash"
+                              ></i></button>
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
+                    <div style="padding-top:5px;display: none;" id="e{{collapse}}">
+
+                        <button name="{{collapse}}" #username4 id="m{{collapse}}"
+                            (click)="validateedit(username)"><i
+                                class="fa-regular fa-pen-to-square"></i></button>
+
+                        &nbsp;
+
+                        <button class=" "(click)="borrarTrabajo(i)"><i class="fa-solid fa-trash"
+                                ></i></button>
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <div style="padding-top:5px;display: none;" id="f{{collapse}}">
+
+                        <button class="btn btn-primary btn-sm" name="{{collapse}}"
+                            #username5 id="n{{collapse}}"
+                            (click)="validateeditSave(username)">modificar</button>
+
+                        &nbsp;
+
+                        <button name="{{collapse}}" #username5 id="n{{collapse}}"
+                            (click)="validateeditSave(username)"><i
+                                class="fa-solid fa-xmark"></i></button>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+            <section style="height: 80px;padding: 11px;" class="content">
+                Seleccione las competencias
+                <div class="d-flex justify-content-start">
+                    <div style="padding: 30px;">
+
+
+
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="btn btn-outline-secondary btn-sm"><i
+                                        class="fa fa-id-badge" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="col-sm">
+                                <input class="form-check-input" type="checkbox" value=""
+                                    id="flexCheckDefault">
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div style="padding: 30px;" class="boxIcon">
+
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="btn btn-outline-secondary btn-sm"><i
+                                        class="fa fa-id-badge" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="col-sm">
+                                <input class="form-check-input" type="checkbox" value=""
+                                    id="flexCheckDefault">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div style="padding: 30px;">
+
+
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="btn btn-outline-secondary btn-sm"><i
+                                        class="fa fa-id-badge" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="col-sm">
+                                <input class="form-check-input" type="checkbox" value=""
+                                    id="flexCheckDefault">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div style="padding: 30px;">
+
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="btn btn-outline-secondary btn-sm"><i
+                                        class="fa fa-id-badge" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="col-sm">
+                                <input class="form-check-input" type="checkbox" value=""
+                                    id="flexCheckDefault">
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </section>
+
+        </section>
+        <br>
+    </div>
+
+
+
+
+    <!----------------------------------------------------------------------->
+    <!-----inicia el cliclo para agregar  mas tarjetas de destrezas texto------------------------------------------------------------------>
+    <!----------------------------------------------------------------------->
+
+
+    <div id="{{collapse}}" *ngFor="let collapse of collapses1; let i = index">
+        <section style="padding: 20px;background-color: rgba(0, 0, 0, 0.083);">
+
+
+
+            <div class="row">
+                <div class="col-sm">
+
+                    <input for="" class="form-control " value="{{this.textoselect}}">
+                </div>
+                <div class="col-sm-3">
+                    <div style="padding-top:5px;display: none;" id="ss{{collapse}}">
+                        <button display="block" name="{{collapse}}" #usernamee
+                            id="cc{{collapse}}" (click)="validateSelect(usernamee)"
+                            class="btn btn-primary btn-sm">Crear</button>
+
+                        &nbsp;
+
+                        <button name="{{collapse}}" display="block" name="{{collapse}}"
+                            id="bb{{collapse}}" #username11 (click)="borrarTrabajo1(i)"><i
+                                class="fa-solid fa-trash"
+                                ></i></button>
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
+                    <div style="padding-top:5px;display: block;" id="ee{{collapse}}">
+
+                        <button name="{{collapse}}" #username44 id="mm{{collapse}}"
+                            (click)="validateeditSelect(usernamee)"><i
+                                class="fa-regular fa-pen-to-square"></i></button>
+
+                        &nbsp;
+
+                        <button class=" "><i class="fa-solid fa-trash"
+                                (click)="borrarTrabajo1(i)"></i></button>
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <div style="padding-top:5px;display: none;" id="ff{{collapse}}">
+
+                        <button class="btn btn-primary btn-sm" name="{{collapse}}"
+                            #username5 id="nn{{collapse}}"
+                            (click)="validateeditSaveSelect(usernamee)">modificar</button>
+
+                        &nbsp;
+
+                        <button name="{{collapse}}" #username5 id="nn{{collapse}}"
+                            (click)="validateeditSaveSelect(usernamee)"><i
+                                class="fa-solid fa-xmark"></i></button>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+            <section style="height: 80px;padding: 11px;" class="content">
+                Seleccione las competencias
+                <div class="d-flex justify-content-start">
+                    <div style="padding: 30px;">
+
+
+
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="btn btn-outline-secondary btn-sm"><i
+                                        class="fa fa-id-badge" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="col-sm">
+                                <input class="form-check-input" type="checkbox" value=""
+                                    id="flexCheckDefault">
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div style="padding: 30px;" class="boxIcon">
+
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="btn btn-outline-secondary btn-sm"><i
+                                        class="fa fa-id-badge" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="col-sm">
+                                <input class="form-check-input" type="checkbox" value=""
+                                    id="flexCheckDefault">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div style="padding: 30px;">
+
+
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="btn btn-outline-secondary btn-sm"><i
+                                        class="fa fa-id-badge" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="col-sm">
+                                <input class="form-check-input" type="checkbox" value=""
+                                    id="flexCheckDefault">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div style="padding: 30px;">
+
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="btn btn-outline-secondary btn-sm"><i
+                                        class="fa fa-id-badge" aria-hidden="true"></i></div>
+                            </div>
+                            <div class="col-sm">
+                                <input class="form-check-input" type="checkbox" value=""
+                                    id="flexCheckDefault">
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </section>
+
+        </section>
+        <br>
+    </div>
+
+</div>
+

@@ -18,23 +18,9 @@ export class AuthService {
 
 
 
-  public postGetLogin(user: any) {
-    return this.restService.postLogin(`${config.api.url}${config.api.login.resource}`, user);
-
-  }
+ 
 
 
-
-
-  inicioSession(dataAdmin: any) {
-    if (dataAdmin) {
-      this.guardarUsuario(dataAdmin.access_token);
-      this.guardarToken(dataAdmin.access_token);
-      this.router.navigateByUrl("/");
-    } else {
-      alerts.basicAlert("error", "Usuario no encontrado", "error")
-    }
-  }
 
 
   private _usuario: any;
@@ -116,16 +102,6 @@ export class AuthService {
     return null;
   }
 
-
-
-
-  isAuthenticated(): boolean {
-    let payload = this.obtenerDatosToken(this.token);
-    if (payload != null && payload.user_name && payload.user_name.length > 0) {
-      return true;
-    }
-    return false;
-  }
 
 
 

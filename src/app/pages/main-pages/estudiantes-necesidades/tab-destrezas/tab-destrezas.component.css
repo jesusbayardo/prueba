@@ -1,0 +1,99 @@
+.aling1 {
+    padding: 5px 5px 5px 25px;
+}
+
+.headercards {
+    height: 66px;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+
+}
+
+.boxhead {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+
+.tamanioLetra {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+div{
+    font-size: 12px;
+}
+
+
+.boxdescargas {
+   
+    display: flex;
+    align-items: stretch;
+  }
+
+  .info{
+    font-size: 18px;
+  }
+
+
+  .contenerdoTexto{
+    word-wrap: break-word;
+  }
+
+
+  .tabmenu{
+    width: 160px;
+
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  
+
+
+
+
+.btntextzise{
+  font-size: 12px;
+}
+
+.boxIcon {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+p {
+  font-family: Lato;
+}
+
+
+.statusDropdownContainer, .calendarBtnContainer{
+    padding-top: 6px;
+}
+
+.statusFilterDropdown{
+    box-shadow: -2px 2px 4px 0px #888;
+    background-color: #f2f8f9;
+    border: 1px solid #d3d3d3;
+}
+
+
+.flex-middle{
+    display: flex;
+   
+}

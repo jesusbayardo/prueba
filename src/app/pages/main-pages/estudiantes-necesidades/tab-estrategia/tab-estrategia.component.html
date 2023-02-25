@@ -1,0 +1,343 @@
+<div class="container">
+
+    <p>Estrategias Metodológicasactivas para la enseñanza y aprendizaje</p>
+    <!------------------------------------------->
+    <!----------------Inicia maquetado creacion--------------------------->
+    <!------------------------------------------->
+
+    <section>
+
+        <div style="background-color: #3d3d4609;width: 100%;height: auto;">
+
+
+
+
+            <div [formGroup]="estrategiaForm">
+                <div formArrayName="estrategiaitems"
+                    *ngFor="let item of estrategiaForm.get('estrategiaitems').controls; let i = index;">
+                    <div [formGroupName]="i">
+
+
+                        <div class="row">
+                            <div class="col-sm">
+                                <input class="form-control " formControlName="descripcion1" placeholder="Item name">
+                            </div>
+                            <div class="col-sm-2">
+
+                                <div style="padding-top:5px;" id="s{{collapse}}">
+                                    <button display="block" name="{{collapse}}" #username id="c{{collapse}}"
+                                        (click)="validate(username)" class="btn btn-primary btn-sm">Crear</button>
+
+                                    &nbsp;
+
+                                    <button name="{{collapse}}" display="block" name="{{collapse}}" id="b{{collapse}}"
+                                        #username1 (click)="eliminarestrategia(i)"><i
+                                            class="fa-solid fa-trash"></i></button>
+
+
+                                </div>
+
+
+
+
+
+
+                                <div style="padding-top:5px;display: none;" id="e{{collapse}}">
+
+                                    <button name="{{collapse}}" #username4 id="m{{collapse}}"
+                                        (click)="validateedit(username)"><i
+                                            class="fa-regular fa-pen-to-square"></i></button>
+
+                                    &nbsp;
+
+                                    <button class=" "><i class="fa-solid fa-trash"
+                                            (click)="ocultaropciones1()"></i></button>
+
+                                </div>
+
+
+
+
+
+
+
+
+                                <div style="padding-top:5px;display: none;" id="f{{collapse}}">
+
+                                    <button class="btn btn-primary btn-sm" name="{{collapse}}" #username5
+                                        id="n{{collapse}}" (click)="validateeditSave(username)">modificar</button>
+
+                                    &nbsp;
+
+                                    <button name="{{collapse}}" #username5 id="n{{collapse}}"
+                                        (click)="validateeditSave(username)"><i class="fa-solid fa-xmark"></i></button>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="row" style="padding: 20px;" *ngIf="sectionEstrategia">
+                        <div class="col-sm">
+
+
+                            <div [formGroup]="orderForm">
+                                <div formArrayName="items"
+                                    *ngFor="let item of orderForm.get('items').controls; let i = index;">
+                                    <div [formGroupName]="i" id="file-upload-form" class="uploader">
+
+
+
+                                        <br>
+                                        <div *ngIf="Actividades"
+                                            style="height: auto;background-color: white;padding-top: 5px;">
+
+                                            <div class="row">
+                                                <div class="col-sm">
+
+                                                    <div style="padding: 5px;">
+
+                                                        <section>
+                                                            <input for="" class="form-control "
+                                                                formControlName="descripcion2">
+                                                        </section>
+
+
+
+
+                                                        <!------------------------------------------------------------>
+                                                        <!---------------------------Entrada carga archivo--------------------------------->
+                                                        <!------------------------------------------------------------>
+
+
+                                                        <section style="padding-top: 10px;">
+                                                            <div *ngFor="let aux of this.archivos;let i = index">
+
+
+
+                                                                <div class="input-group input-group-sm mb-3">
+
+                                                                    <input type="text" class="form-control" readonly
+                                                                        aria-label="Small"
+                                                                        aria-describedby="inputGroup-sizing-sm"
+                                                                        value="{{aux}}">
+                                                                    <div class="input-group-append">
+                                                                        <span class="input-group-text"
+                                                                            id="inputGroup-sizing-sm"
+                                                                            (click)="eliminarfile(i)">X</span>
+                                                                    </div>
+
+
+                                                                </div>
+
+
+                                                            </div>
+
+
+
+
+                                                            <input id="file-upload" type="file" name="fileUpload"
+                                                                multiple formControlName="file"
+                                                                (change)="fileUpload($event)">
+
+                                                            <label for="file-upload" id="file-drag">
+                                                                <img id="file-image" src="#" alt="Preview"
+                                                                    class="hidden">
+                                                                <div id="start">
+                                                                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                                                    <p>
+                                                                        Subir archivo
+                                                                    </p>
+
+                                                                </div>
+                                                                <div id="response" class="hidden">
+                                                                    <div id="messages"></div>
+
+                                                                </div>
+                                                            </label>
+
+
+
+                                                        </section>
+
+
+
+
+
+
+                                                        <!-------------------------------------------------------------->
+                                                        <!---------------------------Agregar link----------------------------------->
+                                                        <!-------------------------------------------------------------->
+
+                                                        <section style="padding-top: 20px;">
+
+                                                         
+                                                                <div *ngFor="let aux of links(i);let x = index">
+                                                                    <div class="input-group input-group-sm mb-3">
+                                                                        <input type="text" class="form-control" readonly
+                                                                            aria-label="Small"
+                                                                            aria-describedby="inputGroup-sizing-sm"
+                                                                            value="{{aux}}">
+                                                                        <div class="input-group-append">
+                                                                            <span class="input-group-text"
+                                                                                id="inputGroup-sizing-sm"
+                                                                                (click)="eliminarlink(i,x)">X</span>
+                                                                        </div>
+
+                                                                    </div>
+
+
+                                                                </div>
+                                                           
+
+
+
+
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" class="form-control"
+                                                                    formControlName="link"
+                                                                    placeholder="Pegar link de enlace"
+                                                                    aria-label="Small"
+                                                                    aria-describedby="inputGroup-sizing-sm">
+                                                                <div class="input-group-append">
+                                                                    <button class="btn btn-primary"
+                                                                        style="padding: 10px;"
+                                                                        (click)="agregaslink(i)">Agregar</button>
+                                                                </div>
+                                                            </div>
+
+
+
+
+                                                        </section>
+
+
+                                                    </div>
+
+
+
+
+
+
+
+
+
+                                                </div>
+                                                <div class="col-sm-2">
+
+                                                    <div style="padding-top:5px;" id="s{{collapse}}">
+                                                        <button display="block" name="{{collapse}}" #username
+                                                            id="c{{collapse}}" (click)="validate(username)"
+                                                            class="btn btn-primary btn-sm">Crear</button>
+
+                                                        &nbsp;
+
+                                                        <button name="{{collapse}}" display="block" name="{{collapse}}"
+                                                            id="b{{collapse}}" #username1
+                                                            (click)="eliminarActivifaf(i)">
+                                                            <i class="fa-solid fa-trash"></i></button>
+
+
+                                                    </div>
+
+
+
+
+
+
+                                                    <div style="padding-top:5px;display: none;" id="e{{collapse}}">
+
+                                                        <button name="{{collapse}}" #username4 id="m{{collapse}}"
+                                                            (click)="validateedit(username)"><i
+                                                                class="fa-regular fa-pen-to-square"></i></button>
+
+                                                        &nbsp;
+
+                                                        <button class=" "><i class="fa-solid fa-trash"
+                                                                (click)="ocultaropciones1()"></i></button>
+
+                                                    </div>
+
+
+
+
+
+
+
+
+                                                    <div style="padding-top:5px;display: none;" id="f{{collapse}}">
+
+                                                        <button class="btn btn-primary btn-sm" name="{{collapse}}"
+                                                            #username5 id="n{{collapse}}"
+                                                            (click)="validateeditSave(username)">modificar</button>
+
+                                                        &nbsp;
+
+                                                        <button name="{{collapse}}" #username5 id="n{{collapse}}"
+                                                            (click)="validateeditSave(username)"><i
+                                                                class="fa-solid fa-xmark"></i></button>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+
+                            <section style="padding-top: 10px;">
+                                <button type="button" class="btn btn-primary" (click)="agregarActividad()"> <i
+                                        class="fa-solid fa-plus"></i>Añadir
+                                    actividad</button>
+                            </section>
+                        </div>
+
+
+
+
+
+
+                        <!--------------------------------------------------------------------------->
+                        <!---------------------------------Botones opciones input------------------------------------------>
+                        <!--------------------------------------------------------------------------->
+
+
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+        <section style="padding-left: 5px;">
+            <button class="btn btn-outline-primary w-100 " (click)=" agregarestrategia()"> <i
+                    class="fa-solid fa-plus"></i>Añadir
+                Estrategia</button>
+        </section>
+
+
+
+
+    </section>
+
+</div>
