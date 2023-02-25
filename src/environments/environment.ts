@@ -10,6 +10,7 @@ export const environment = {
   api: {
 
     url:"http://localhost:8080",
+    urlApi:"http://20.84.54.175/IviBackendDemo/R32/EstudiantesNee/1259"
   }
 };
 

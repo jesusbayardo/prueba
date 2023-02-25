@@ -1,39 +1,25 @@
-import {environment}  from './../environments/environment';
+import { environment } from './../environments/environment';
 
 
 
-export const config={
+export const config = {
 
-    api:{
+    api: {
 
-        url:environment.api.url,
-        persona:{
-            resource:"/persona"
-        },
-        vacuna:{
-            resource:"/vacuna"
+        url: environment.api.url,
+
+
+
+        login: {
+            resource: "/oauth/token"
         }
         ,
-        rol:{
-            resource:"/rol"
-        },
-        asignacionrol:{
-            resource:"/asignacionrol"
-        }
-        ,
-        login:{
-            resource:"/oauth/token"
-        }
+        urlestudiantes: environment.api.urlApi,
 
-        ,
-        registrovacuna:{
-            resource:"/registrovacuna"
-        }
 
-        
-        
 
-        
-        
+
+
+
     }
 }

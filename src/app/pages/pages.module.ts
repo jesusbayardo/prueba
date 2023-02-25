@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { Error404Component } from './main-pages/error404/error404.component';
 import { AuthService } from './authServices';
 import { RestService } from '../core/rest.services';
+import { EstudiantesService } from './main-pages/_services/estudiantes.services';
 
 
 
@@ -24,7 +25,7 @@ import { RestService } from '../core/rest.services';
     CommonModule, SharedModule, AppRoutingModule
   ],
   providers: [
-    AuthService, RestService
+    AuthService, RestService,EstudiantesService
   ]
 })
 export class PagesModule { }

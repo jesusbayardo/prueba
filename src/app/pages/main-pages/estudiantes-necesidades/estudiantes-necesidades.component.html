@@ -4,47 +4,330 @@
     <!-- Main content -->
     <section class="content">
 
-        <!-- Default box -->
-        <div class="card  card-nav-padding">
-            <div class="card-header-nav bg-primary">
 
+        <div class="card  ">
 
-                <div class="card-tools" style="padding: 5px 5px 5px 25px;">
-                    4.- ESTUDIANTES CON NECESIDADES EDUCATIVAS ESPECIFICAS <i class="fa-solid fa-info"></i>
-                </div>
-            </div>
             <div class="card-body">
+                <section style="padding-left: 10px;">
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal"
+                        data-target="#exampleModalTransporte"> <i class="fa-solid fa-plus"></i>Añadir
+                        nuevo</button>
+                </section>
+            </div>
+        </div>
 
-                <div class="row">
-                    <div class="col-sm-4 " style="padding: 1px;">
-                        <div class="border">
-                           <p style="font-weight: bold;">Estudiante NEE:</p> 
-                        </div>
-                    
+        <!-- Default box -->
+        <div class="card  ">
+
+            <div class="card-body">
+                <div class="box " style="padding-top: 10px;">
+                    <div class="col-sm ">
+
+                        <div for="" class="form-control bg-primary" style="height: 50px;padding-top: 10px;"> <label
+                                for="" style="padding-right: 25px;">4. ESTUDIANTES CON NECESIDADES EDUCATIVAS
+                                ESPECÍFICAS </label> <i class="fa fa-info-circle info" aria-hidden="true"></i> </div>
                     </div>
-                   
-                    
-                    <div class="col-sm-4 " style="padding: 1px;">
-                        <div class="border">
-                           <p style="font-weight: bold;">Estudiante NEE:</p> 
+
+
+                    <div style="width: 50px;">
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-group"></div>
+
+
+                <div *ngFor="let item of dataEstudiante;let indice=index">
+
+                    <div class="box " style="padding-top: 5px;">
+                        <div class="col-sm ">
+
+                            <div for="" class="form-control "><label for="">Estudiante NEE:</label>
+                                {{item.nombreestudiante}}</div>
                         </div>
-                    
+
+                        <div class="col-sm ">
+                            <div for="" class="form-control "> <label for="">Grado de adaptación:</label>
+                                {{item.gradoadaptacioncurricular1}}
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm ">
+                            <div for="" class="form-control "> <label class="">NEE: </label>
+                                {{item.gradoadaptacioncurricular1}}</div>
+                        </div>
+
+                        <div style="width: 50px;"> </div>
                     </div>
 
-                    <div class="col-sm-4 " style="padding: 1px;">
-                        <div class="border">
-                           <p style="font-weight: bold;">Estudiante NEE:</p> 
+                    <div class="box" style="padding-top: 5px;">
+                        <div class="col-sm ">
+
+
+                            <!--------------------------------------------------------------->
+                            <!----------------------ENTRADA DESTREZAS----------------------------------------->
+                            <!--------------------------------------------------------------->
+
+                            <div>
+                                <div style="padding-bottom: 5px;">
+                                    <div class="border headercards  " style="background-color: #2629f436;">
+
+
+                                        <div class="boxhead">
+                                            <div style="width: 85%;">
+                                                <label for="" class="tamanioLetra contenerdoTexto">{{destrezas}}</label>
+                                            </div>
+
+                                            <div>
+
+                                                <i class="fa fa-info-circle info" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="border" style="padding-top: 10px;">
+
+                                    <section style="height: 110px;padding: 11px;" class="content">
+                                        <div class="card-text contenerdoTexto">
+                                            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos
+                                            de texto. Lorem Ipsum ha sido el texto de relleno0
+                                        </div>
+                                    </section>
+
+
+                                    <section style="height: 75px;padding: 11px;" class="content">
+                                        <div class="d-flex justify-content-start">
+                                            <div style="padding: 2px;">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm"><i
+                                                        class="fa fa-id-badge" aria-hidden="true"></i></button>
+                                            </div>
+
+                                            <div style="padding: 2px;">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm">
+                                                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+
+
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
                         </div>
-                    
+
+
+                        <!------------------------------------------->
+                        <!--------------ENTRADA INDICADORES----------------->
+                        <!----------------------------------------->
+
+                        <div class="col-sm ">
+                            <div>
+                                <div style="padding-bottom: 5px;">
+                                    <div class="border headercards  " style="background-color: #2629f436;">
+
+                                        <div class="boxhead">
+                                            <div style="width: 70%;">
+                                                <label for=""
+                                                    class="tamanioLetra contenerdoTexto">{{indicadores}}</label>
+                                            </div>
+
+                                            <div>
+
+                                                <i class="fa fa-info-circle info" aria-hidden="true"></i>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="border" style="padding-top: 10px;">
+                                    <section style="height: 110px;padding: 11px;" class="content">
+                                        <p class="card-text contenerdoTexto">
+                                            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos
+                                            de texto. Lorem Ipsum ha sido el texto de relleno0
+
+                                        </p>
+                                    </section>
+
+
+                                    <section style="height: 80px;padding: 11px;" class="content">
+                                        <div class="d-flex justify-content-start">
+                                            <div style="padding: 2px;">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm"><i
+                                                        class="fa fa-id-badge" aria-hidden="true"></i></button>
+                                            </div>
+
+                                            <div style="padding: 2px;">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm">
+                                                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                            <div style="padding: 2px;">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm">
+                                                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                            <div style="padding: 2px;">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm">
+                                                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+
+
+                                        </div>
+                                    </section>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+                        <!------------------------------------------->
+                        <!--------------ENTRADA ESTRATEGIAS----------------->
+                        <!----------------------------------------->
+
+
+                        <div class="col-sm ">
+
+                            <div>
+                                <div style="padding-bottom: 5px;">
+                                    <div class="border headercards  " style="background-color: #2629f436;">
+
+                                        <div class="boxhead">
+                                            <div style="width: 91%;">
+                                                <label for=""
+                                                    class="tamanioLetra contenerdoTexto">{{estrategias}}</label>
+                                            </div>
+
+                                            <div>
+
+                                                <i class="fa fa-info-circle info" aria-hidden="true"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="border" style="padding-top: 10px;">
+
+                                    <section style="height: 110px;padding: 11px;" class="content">
+                                        <p class="card-text contenerdoTexto">
+                                            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos
+                                            de texto. Lorem Ipsum ha sido el texto de relleno0
+
+                                        </p>
+                                    </section>
+                                    <section style="height: 80px;padding: 11px;" class="content">
+
+                                    </section>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!------------------------------------------->
+                        <!--------------ENTRADA ACTIVIDADES----------------->
+                        <!----------------------------------------->
+
+                        <div class="col-sm ">
+
+                            <div>
+                                <div style="padding-bottom: 5px;">
+                                    <div class="border headercards  " style="background-color: #2629f436;">
+                                        <div class="boxhead">
+                                            <div style="width: 70%;">
+                                                <label for=""
+                                                    class="tamanioLetra contenerdoTexto">{{actividades}}</label>
+                                            </div>
+
+                                            <div>
+                                                <i class="fa fa-info-circle info" aria-hidden="true"></i>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="border" style="padding-top: 10px;">
+
+                                    <section style="height: 110px;padding: 11px;" class="content">
+                                        <p class="card-text contenerdoTexto">
+                                            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos
+                                            de texto. Lorem Ipsum ha sido el texto de relleno0
+
+                                        </p>
+                                    </section>
+
+
+                                    <section style="height: 80px;padding: 11px;" class="content">
+
+                                        <section style="padding: 2px;">
+                                            <div class="boxdescargas" style="background-color: rgba(0, 0, 0, 0.082);">
+                                                <div style="width: 20px;text-align: center;" class="bg-primary"><i
+                                                        class="fa-regular fa-file"></i></div>
+                                                <div style="width: 100%;padding-left: 15px;">Archivo adjun...</div>
+                                                <div style="width: 20px;text-align: right" class="border"><i
+                                                        class="fa-solid fa-download"></i></div>
+
+                                            </div>
+                                        </section>
+                                        <section style="padding: 2px;">
+
+                                            <div class="boxdescargas" style="background-color: rgba(0, 0, 0, 0.082);">
+                                                <div style="width: 20px;text-align: center;" class="bg-primary"><i
+                                                        class="fa-regular fa-file"></i></div>
+                                                <div style="width: 100%;padding-left: 15px;">Archivo adjun...</div>
+                                                <div style="width: 20px;text-align: right" class="border"><i
+                                                        class="fa-solid fa-download"></i></div>
+
+                                            </div>
+                                        </section>
+                                    </section>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <!------------------------------->
+                        <!--------------ENTRADA BOTONES----------------->
+                        <!------------------------------->
+
+                        <div style="width: 50px;padding-top: 110px;">
+                            <div>
+                                <button class=""><i class="fa-regular fa-pen-to-square"></i></button>
+                            </div>
+                            <br>
+                            <div>
+                                <button class=" "><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </div>
+
                     </div>
-                  </div>
-
-
-
-
-
-
-
+                </div>
 
 
 
@@ -52,14 +335,648 @@
 
             </div>
             <!-- /.card-body -->
-            <div class="card-footer">
+
+            <div class="card-body">
+                <section style="padding-left: 10px;">
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal"
+                        data-target="#exampleModalTransporte"> <i class="fa-solid fa-plus"></i>Añadir
+                        nuevo</button>
+                </section>
 
             </div>
+
             <!-- /.card-footer-->
         </div>
         <!-- /.card -->
+
+
+
 
     </section>
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
+
+
+
+
+
+<!--***********************Modal transporte***************-->
+<!--****************************************************-->
+<!--****************************************************-->
+<div class="modal fade" id="exampleModalTransporte" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title" id="exampleModalLabel">Estudiates con necesidades educativas específicas (NEE)
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+
+            <div class="modal-body">
+
+                <section style="height: 500px;">
+                    <ul class="nav nav-pills mb-2" id="pills-tab" role="tablist">
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA ESTUDIANTES CON NEE---------------------------->
+                        <!------------------------------------------------------>
+
+                        <li class="nav-item border tabmenu" role="presentation">
+                            <button style="height: 100%;width: 100%;" class="nav-link active tabmenu"
+                                id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
+                                role="tab" aria-controls="pills-home" aria-selected="true">Estudiantes con NEE</button>
+                        </li>
+
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA DESTREZAS---------------------------->
+                        <!------------------------------------------------------>
+
+
+                        <li class="nav-item border tabmenu" role="presentation">
+                            <button style="height: 100%;width: 100%;" class="nav-link  tabmenu" id="pills-destrezas-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-destrezas" type="button" role="tab"
+                                aria-controls="pills-destrezas" aria-selected="true">Destrezas</button>
+
+                        </li>
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA Indicadores---------------------------->
+                        <!------------------------------------------------------>
+
+
+                        <li class="nav-item border tabmenu" role="presentation">
+                            <button style="height: 100%;width: 100%;" class="nav-link tabmenu"
+                                id="pills-indicadores-tab" data-bs-toggle="pill" data-bs-target="#pills-indicadores"
+                                type="button" role="tab" aria-controls="pills-indicadores"
+                                aria-selected="false">Indicadores</button>
+                        </li>
+
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA Estrategias---------------------------->
+                        <!------------------------------------------------------>
+
+                        <li class="nav-item border tabmenu" role="presentation">
+                            <button style="height: 100%;width: 100%;" class="nav-link tabmenu" id="pills-estrategias-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-estrategias" type="button" role="tab"
+                                aria-controls="pills-estrategias" aria-selected="false">EstrategUas</button>
+                        </li>
+
+
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA Actividades---------------------------->
+                        <!------------------------------------------------------>
+
+                        <li class="nav-item border tabmenu" role="presentation">
+                            <button style="height: 100%;width: 100%;" class="nav-link tabmenu" id="pills-actividades-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-actividades" type="button" role="tab"
+                                aria-controls="pills-actividades" aria-selected="false">Actividades</button>
+                        </li>
+
+
+                    </ul>
+
+
+
+
+
+
+                    <div class="tab-content" id="pills-tabContent">
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA ESTUDIANTES CON NEE---------------------------->
+                        <!------------------------------------------------------>
+
+
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            Estudiante con necesidaes educativas específicas
+                            <form autocomplete="off" [formGroup]="form1">
+
+                                <div class="form-group">
+                                    <select formControlName="category" (ngModelChange)="SelectPrimerTab()"
+                                        class=" form-select form-select-sm">
+                                        <option [ngValue]="null">Seleccciona a un estudiante de la lista</option>
+                                        <option *ngFor="let option of dataEstudiante" [ngValue]="option">
+                                            {{option.nombreestudiante}}</option>
+                                    </select>
+                                </div>
+
+
+
+                            </form>
+
+
+
+
+                            <section *ngIf="estudianteNee">
+
+                                <div *ngFor="let aux of selected.discapacidades">
+                                    <div class="border" style="width: 100%; ">
+                                        <label for="">Especificación de la NEE:</label>{{aux.nombrediscapacidad}}
+                                    </div>
+
+
+                                </div>
+
+                                <div class="border" style="width: 100%; ">
+                                    <label for="">Grado de adaptación:</label> {{selected.gradoadaptacioncurricular1}}
+                                </div>
+                            </section>
+
+
+
+
+
+                        </div>
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA DESTREZAS---------------------------->
+                        <!------------------------------------------------------>
+                        <div class="tab-pane fade" id="pills-destrezas" role="tabpanel"
+                            aria-labelledby="pills-destrezas-tab">
+
+                            <div id="global">
+                                <section style="padding: 20px;background-color: rgba(0, 0, 0, 0.083);">
+
+
+
+
+                                    <!------------------------------------------------>
+                                    <!----------------Entrada Select destrezas-------------------------------->
+                                    <!------------------------------------------------>
+
+                                    <div class="row">
+                                        <div class="col-sm-9">
+
+                                            <form autocomplete="off" [formGroup]="form2">
+                                                <select class="selectpicker   form-select form-select-sm"
+                                                    (change)="selectChange()" formControlName="destreza"
+                                                    data-live-search="true" style="font-size: 10px;" data-width="100%">
+                                                    <option [value]="null">Seleccciona a un estudiante de la lista
+                                                    </option>
+
+                                                    <option *ngFor="let option of jsondestrezas" [value]="option">
+                                                        {{option.detreza}}</option>
+
+                                                </select>
+
+                                            </form>
+                                        </div>
+
+
+
+                                        <!-------------------------------AÑADENUEVA DESTREZAS----------------------------->
+                                        <!--------------------------------------------------------------------------->
+                                        <!--------------------------------------------------------------------------->
+                                        <div class="col-sm">
+                                            <button type="button" class="btn btn-primary btn-sm"
+                                                (click)="agregarCollapse()" style="padding: 10px;width: 100%;"> <i
+                                                    class="fa-solid fa-plus"></i>Añadir
+                                                detreza</button>
+
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <br>
+
+
+                                <!----------------------------------------------------------------------->
+                                <!-----inicia el cliclo para agregar  mas tarjetas de destrezas------------------------------------------------------------------>
+                                <!----------------------------------------------------------------------->
+
+                                <div id="{{collapse}}" *ngFor="let collapse of collapses; let i = index">
+                                    <section style="padding: 20px;background-color: rgba(0, 0, 0, 0.083);">
+
+
+
+                                        <div class="row">
+                                            <div class="col-sm">
+
+                                                <input for="" class="form-control " value="{{this.texto}}">
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div style="padding-top:5px;" id="s{{collapse}}">
+                                                    <button display="block" name="{{collapse}}" #username
+                                                        id="c{{collapse}}" (click)="validate(username)"
+                                                        class="btn btn-primary btn-sm">Crear</button>
+
+                                                    &nbsp;
+
+                                                    <button name="{{collapse}}" display="block" name="{{collapse}}"
+                                                        id="b{{collapse}}" #username1 (click)="borrarTrabajo(i)"><i
+                                                            class="fa-solid fa-trash"
+                                                            (click)="borrarTrabajo(i)"></i></button>
+
+
+
+
+
+                                                </div>
+
+
+
+
+
+
+                                                <div style="padding-top:5px;display: none;" id="e{{collapse}}">
+
+                                                    <button name="{{collapse}}" #username4 id="m{{collapse}}"
+                                                        (click)="validateedit(username)"><i
+                                                            class="fa-regular fa-pen-to-square"></i></button>
+
+                                                    &nbsp;
+
+                                                    <button class=" "><i class="fa-solid fa-trash"
+                                                            (click)="borrarTrabajo(i)"></i></button>
+
+                                                </div>
+
+
+
+
+
+
+
+
+                                                <div style="padding-top:5px;display: none;" id="f{{collapse}}">
+
+                                                    <button class="btn btn-primary btn-sm" name="{{collapse}}"
+                                                        #username5 id="n{{collapse}}"
+                                                        (click)="validateeditSave(username)">modificar</button>
+
+                                                    &nbsp;
+
+                                                    <button name="{{collapse}}" #username5 id="n{{collapse}}"
+                                                        (click)="validateeditSave(username)"><i
+                                                            class="fa-solid fa-xmark"></i></button>
+
+                                                </div>
+
+
+
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+
+
+                                        <section style="height: 80px;padding: 11px;" class="content">
+                                            Seleccione las competencias
+                                            <div class="d-flex justify-content-start">
+                                                <div style="padding: 30px;">
+
+
+
+                                                    <div class="row">
+                                                        <div class="col-sm">
+                                                            <div class="btn btn-outline-secondary btn-sm"><i
+                                                                    class="fa fa-id-badge" aria-hidden="true"></i></div>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckDefault">
+                                                        </div>
+
+                                                    </div>
+
+
+
+                                                </div>
+
+                                                <div style="padding: 30px;" class="boxIcon">
+
+                                                    <div class="row">
+                                                        <div class="col-sm">
+                                                            <div class="btn btn-outline-secondary btn-sm"><i
+                                                                    class="fa fa-id-badge" aria-hidden="true"></i></div>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckDefault">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div style="padding: 30px;">
+
+
+                                                    <div class="row">
+                                                        <div class="col-sm">
+                                                            <div class="btn btn-outline-secondary btn-sm"><i
+                                                                    class="fa fa-id-badge" aria-hidden="true"></i></div>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckDefault">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div style="padding: 30px;">
+
+                                                    <div class="row">
+                                                        <div class="col-sm">
+                                                            <div class="btn btn-outline-secondary btn-sm"><i
+                                                                    class="fa fa-id-badge" aria-hidden="true"></i></div>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckDefault">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                        </section>
+
+                                    </section>
+                                    <br>
+                                </div>
+
+
+
+
+                                <!----------------------------------------------------------------------->
+                                <!-----inicia el cliclo para agregar  mas tarjetas de destrezas texto------------------------------------------------------------------>
+                                <!----------------------------------------------------------------------->
+
+
+                                <div id="{{collapse}}" *ngFor="let collapse of collapses1; let i = index">
+                                    <section style="padding: 20px;background-color: rgba(0, 0, 0, 0.083);">
+
+
+
+                                        <div class="row">
+                                            <div class="col-sm">
+
+                                                <input for="" class="form-control " value="{{this.textoselect}}">
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div style="padding-top:5px;display: none;" id="ss{{collapse}}">
+                                                    <button display="block" name="{{collapse}}" #usernamee
+                                                        id="cc{{collapse}}" (click)="validateSelect(usernamee)"
+                                                        class="btn btn-primary btn-sm">Crear</button>
+
+                                                    &nbsp;
+
+                                                    <button name="{{collapse}}" display="block" name="{{collapse}}"
+                                                        id="bb{{collapse}}" #username11 (click)="borrarTrabajo1(i)"><i
+                                                            class="fa-solid fa-trash"
+                                                            (click)="borrarTrabajo1(i)"></i></button>
+
+
+
+
+
+                                                </div>
+
+
+
+
+
+
+                                                <div style="padding-top:5px;display: block;" id="ee{{collapse}}">
+
+                                                    <button name="{{collapse}}" #username44 id="mm{{collapse}}"
+                                                        (click)="validateeditSelect(usernamee)"><i
+                                                            class="fa-regular fa-pen-to-square"></i></button>
+
+                                                    &nbsp;
+
+                                                    <button class=" "><i class="fa-solid fa-trash"
+                                                            (click)="borrarTrabajo1(i)"></i></button>
+
+                                                </div>
+
+
+
+
+
+
+
+
+                                                <div style="padding-top:5px;display: none;" id="ff{{collapse}}">
+
+                                                    <button class="btn btn-primary btn-sm" name="{{collapse}}"
+                                                        #username5 id="nn{{collapse}}"
+                                                        (click)="validateeditSaveSelect(usernamee)">modificar</button>
+
+                                                    &nbsp;
+
+                                                    <button name="{{collapse}}" #username5 id="nn{{collapse}}"
+                                                        (click)="validateeditSaveSelect(usernamee)"><i
+                                                            class="fa-solid fa-xmark"></i></button>
+
+                                                </div>
+
+
+
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+
+
+                                        <section style="height: 80px;padding: 11px;" class="content">
+                                            Seleccione las competencias
+                                            <div class="d-flex justify-content-start">
+                                                <div style="padding: 30px;">
+
+
+
+                                                    <div class="row">
+                                                        <div class="col-sm">
+                                                            <div class="btn btn-outline-secondary btn-sm"><i
+                                                                    class="fa fa-id-badge" aria-hidden="true"></i></div>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckDefault">
+                                                        </div>
+
+                                                    </div>
+
+
+
+                                                </div>
+
+                                                <div style="padding: 30px;" class="boxIcon">
+
+                                                    <div class="row">
+                                                        <div class="col-sm">
+                                                            <div class="btn btn-outline-secondary btn-sm"><i
+                                                                    class="fa fa-id-badge" aria-hidden="true"></i></div>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckDefault">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div style="padding: 30px;">
+
+
+                                                    <div class="row">
+                                                        <div class="col-sm">
+                                                            <div class="btn btn-outline-secondary btn-sm"><i
+                                                                    class="fa fa-id-badge" aria-hidden="true"></i></div>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckDefault">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div style="padding: 30px;">
+
+                                                    <div class="row">
+                                                        <div class="col-sm">
+                                                            <div class="btn btn-outline-secondary btn-sm"><i
+                                                                    class="fa fa-id-badge" aria-hidden="true"></i></div>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckDefault">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                        </section>
+
+                                    </section>
+                                    <br>
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA indicadores---------------------------->
+                        <!------------------------------------------------------>
+
+                        <div class="tab-pane fade" id="pills-indicadores" role="tabpanel"
+                            aria-labelledby="pills-indicadores-tab">
+                            Indicadores
+
+
+                        </div>
+
+
+
+
+                        
+                        <!------------------------------------------------------>
+                        <!--------------------------ENTRADA estrategias---------------------------->
+                        <!------------------------------------------------------>
+
+                        <div class="tab-pane fade" id="pills-estrategias" role="tabpanel"
+                            aria-labelledby="pills-estrategias-tab">
+                            estrategias
+
+
+                        </div>
+
+
+
+
+                         <!------------------------------------------------------>
+                        <!--------------------------ENTRADA actividades---------------------------->
+                        <!------------------------------------------------------>
+
+                        <div class="tab-pane fade" id="pills-actividades" role="tabpanel"
+                            aria-labelledby="pills-actividades-tab">
+                        
+
+
+                            <div class="container">
+
+
+                                <!-------------------------------------------------->
+                                  <!-------------------boton añadir estratefia------------------------------->
+                                  <button type="button" class="btn btn-outline-primary" data-toggle="modal"
+                                  data-target="#exampleModalTransporte"> <i class="fa-solid fa-plus"></i>Añadir
+                                  nuevo</button>
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+                </section>
+
+
+
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-primary btntextzise">Guardar</button>
+                    <button type="button" class="btn btn-secondary btntextzise" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>

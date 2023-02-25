@@ -21,10 +21,7 @@ export class RestService {
   private agregarAuthorizationHeader() {
 
     this.httpHeaders = new HttpHeaders({'Content-Type':'application/json'});
-    let token = sessionStorage.getItem('token');
-    if (token != null) {
-      return this.httpHeaders.append('Authorization', 'bearer ' + token);
-    }
+   
     return this.httpHeaders;
   }
 
@@ -34,7 +31,7 @@ export class RestService {
 
   public get(url: string) {
 
-    return this.httpClient.get(url, { headers: this.agregarAuthorizationHeader(), withCredentials:true });
+    return this.httpClient.get(url);
   }
 
   public post(url: string, object: any) {
